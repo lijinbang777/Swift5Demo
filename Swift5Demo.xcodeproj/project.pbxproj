@@ -13,6 +13,15 @@
 		32AD726C287320CC0037387D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD726A287320CC0037387D /* Main.storyboard */; };
 		32AD726E287320D00037387D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AD726D287320D00037387D /* Assets.xcassets */; };
 		32AD7271287320D00037387D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD726F287320D00037387D /* LaunchScreen.storyboard */; };
+		32AD727E28732DEB0037387D /* TTMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD727D28732DEB0037387D /* TTMessageViewController.swift */; };
+		32AD728028732E4C0037387D /* TTDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD727F28732E4C0037387D /* TTDiscoverViewController.swift */; };
+		32AD728228732E580037387D /* TTAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD728128732E580037387D /* TTAboutViewController.swift */; };
+		32AD728428732E610037387D /* TTMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD728328732E610037387D /* TTMyViewController.swift */; };
+		32AD728628732FAD0037387D /* TTTabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD728528732FAD0037387D /* TTTabItemView.swift */; };
+		32AD72882873351A0037387D /* TTNavigationControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD72872873351A0037387D /* TTNavigationControllerViewController.swift */; };
+		32AD728B287335BA0037387D /* TTConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD728A287335BA0037387D /* TTConfig.swift */; };
+		32AD728D287341C80037387D /* TTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD728C287341C80037387D /* TTHomeViewController.swift */; };
+		3D127B28EC0CF77074A9DBCE /* Pods_Swift5Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C231A75E96A277C6677C1BF4 /* Pods_Swift5Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,17 @@
 		32AD726D287320D00037387D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32AD7270287320D00037387D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32AD7272287320D00037387D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32AD727D28732DEB0037387D /* TTMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMessageViewController.swift; sourceTree = "<group>"; };
+		32AD727F28732E4C0037387D /* TTDiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTDiscoverViewController.swift; sourceTree = "<group>"; };
+		32AD728128732E580037387D /* TTAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTAboutViewController.swift; sourceTree = "<group>"; };
+		32AD728328732E610037387D /* TTMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMyViewController.swift; sourceTree = "<group>"; };
+		32AD728528732FAD0037387D /* TTTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTTabItemView.swift; sourceTree = "<group>"; };
+		32AD72872873351A0037387D /* TTNavigationControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTNavigationControllerViewController.swift; sourceTree = "<group>"; };
+		32AD728A287335BA0037387D /* TTConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTConfig.swift; sourceTree = "<group>"; };
+		32AD728C287341C80037387D /* TTHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTHomeViewController.swift; sourceTree = "<group>"; };
+		4EF2DFDD8679D2705C6BD892 /* Pods-Swift5Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Demo.release.xcconfig"; path = "Target Support Files/Pods-Swift5Demo/Pods-Swift5Demo.release.xcconfig"; sourceTree = "<group>"; };
+		75C3A9DF5D0F6E794F023428 /* Pods-Swift5Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Demo.debug.xcconfig"; path = "Target Support Files/Pods-Swift5Demo/Pods-Swift5Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		C231A75E96A277C6677C1BF4 /* Pods_Swift5Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D127B28EC0CF77074A9DBCE /* Pods_Swift5Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +63,8 @@
 			children = (
 				32AD7263287320CC0037387D /* Swift5Demo */,
 				32AD7262287320CC0037387D /* Products */,
+				84E7F810757B9A2DCD853D85 /* Pods */,
+				5BFAE4206A7BD49BDA7283C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +82,69 @@
 				32AD7264287320CC0037387D /* AppDelegate.swift */,
 				32AD7266287320CC0037387D /* SceneDelegate.swift */,
 				32AD7268287320CC0037387D /* ViewController.swift */,
+				32AD727828732CD30037387D /* BackBone */,
 				32AD726A287320CC0037387D /* Main.storyboard */,
 				32AD726D287320D00037387D /* Assets.xcassets */,
 				32AD726F287320D00037387D /* LaunchScreen.storyboard */,
 				32AD7272287320D00037387D /* Info.plist */,
 			);
 			path = Swift5Demo;
+			sourceTree = "<group>";
+		};
+		32AD727828732CD30037387D /* BackBone */ = {
+			isa = PBXGroup;
+			children = (
+				32AD7289287335A10037387D /* Config */,
+				32AD727A28732CF70037387D /* View */,
+				32AD727928732CE70037387D /* Controller */,
+			);
+			path = BackBone;
+			sourceTree = "<group>";
+		};
+		32AD727928732CE70037387D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				32AD728C287341C80037387D /* TTHomeViewController.swift */,
+				32AD727D28732DEB0037387D /* TTMessageViewController.swift */,
+				32AD727F28732E4C0037387D /* TTDiscoverViewController.swift */,
+				32AD728128732E580037387D /* TTAboutViewController.swift */,
+				32AD728328732E610037387D /* TTMyViewController.swift */,
+				32AD72872873351A0037387D /* TTNavigationControllerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		32AD727A28732CF70037387D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32AD728528732FAD0037387D /* TTTabItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		32AD7289287335A10037387D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				32AD728A287335BA0037387D /* TTConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		5BFAE4206A7BD49BDA7283C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C231A75E96A277C6677C1BF4 /* Pods_Swift5Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84E7F810757B9A2DCD853D85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75C3A9DF5D0F6E794F023428 /* Pods-Swift5Demo.debug.xcconfig */,
+				4EF2DFDD8679D2705C6BD892 /* Pods-Swift5Demo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32AD7275287320D00037387D /* Build configuration list for PBXNativeTarget "Swift5Demo" */;
 			buildPhases = (
+				4CB7DF09F186C3CA9350F269 /* [CP] Check Pods Manifest.lock */,
 				32AD725D287320CC0037387D /* Sources */,
 				32AD725E287320CC0037387D /* Frameworks */,
 				32AD725F287320CC0037387D /* Resources */,
+				D66CEAC07C7A0B85C813A44D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -94,8 +176,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = TT;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
+				ORGANIZATIONNAME = com.test.www;
 				TargetAttributes = {
 					32AD7260287320CC0037387D = {
 						CreatedOnToolsVersion = 13.0;
@@ -133,12 +217,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4CB7DF09F186C3CA9350F269 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swift5Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D66CEAC07C7A0B85C813A44D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift5Demo/Pods-Swift5Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift5Demo/Pods-Swift5Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift5Demo/Pods-Swift5Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		32AD725D287320CC0037387D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32AD72882873351A0037387D /* TTNavigationControllerViewController.swift in Sources */,
+				32AD728428732E610037387D /* TTMyViewController.swift in Sources */,
+				32AD727E28732DEB0037387D /* TTMessageViewController.swift in Sources */,
+				32AD728628732FAD0037387D /* TTTabItemView.swift in Sources */,
 				32AD7269287320CC0037387D /* ViewController.swift in Sources */,
+				32AD728228732E580037387D /* TTAboutViewController.swift in Sources */,
+				32AD728028732E4C0037387D /* TTDiscoverViewController.swift in Sources */,
+				32AD728B287335BA0037387D /* TTConfig.swift in Sources */,
+				32AD728D287341C80037387D /* TTHomeViewController.swift in Sources */,
 				32AD7265287320CC0037387D /* AppDelegate.swift in Sources */,
 				32AD7267287320CC0037387D /* SceneDelegate.swift in Sources */,
 			);
@@ -284,6 +418,7 @@
 		};
 		32AD7276287320D00037387D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75C3A9DF5D0F6E794F023428 /* Pods-Swift5Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +447,7 @@
 		};
 		32AD7277287320D00037387D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EF2DFDD8679D2705C6BD892 /* Pods-Swift5Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

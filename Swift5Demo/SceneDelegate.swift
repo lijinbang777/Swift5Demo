@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import SwiftMessages
+import ESTabBarController_swift
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -16,7 +17,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScence = (scene as? UIWindowScene) else { return }
+        
+        let tabVC = settingTabbar(delegate: self as? UITabBarControllerDelegate)
+        window = UIWindow(windowScene: windowScence)
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = tabVC;
+        window?.makeKeyAndVisible()
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -49,4 +57,60 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
+extension SceneDelegate {
+    private func settingTabbar(delegate: UITabBarControllerDelegate?) -> ESTabBarController{
+        let tabVC = ESTabBarController()
+        tabVC.delegate = delegate
+        tabVC.title = ""
+        tabVC.tabBar.shadowImage = UIImage(named: "")
+        tabVC.shouldHijackHandler = {
+            tabvc,vc,index in
+            if index == 2 {
+                return true
+            }
+            return false
+        }
+        
+        tabVC.didHijackHandler = {
+            [weak tabVC] tabbarVC,viewController,index in
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.2, execute: {
+                let warning = MessageView.viewFromNib(layout: .cardView)
+                warning.configureTheme(.warning)
+                warning.configureDropShadow()
+                warning.configureContent(title: "Warning", body: "暂时没有此功能", iconText: "🙄")
+                warning.button?.isHidden = true
+                var warningConfig = SwiftMessages.defaultConfig
+                warningConfig.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
+                SwiftMessages.show(config: warningConfig, view: warning)
+            })
+        }
+        
+        let home = TTHomeViewController()
+        let message = TTMessageViewController()
+        let discover = TTDiscoverViewController()
+        let about = TTAboutViewController()
+        let my = TTMyViewController()
+        
+        home.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "Home", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
+        message.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "Message", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
+        discover.tabBarItem = ESTabBarItem.init(TTIrregularTabbarItemView(), title: "Discover", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
+        about.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "About", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
+        my.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "My", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
+        
+        tabVC.viewControllers = [
+            setRoot(viewController: home, title: "Home"),
+            setRoot(viewController: message, title: "Message"),
+            setRoot(viewController: discover, title: "Discover"),
+            setRoot(viewController: about, title: "About"),
+            setRoot(viewController: my, title: "My"),
+        ]
+       
+        
+       return tabVC
+    }
+    private func setRoot(viewController: UIViewController,title: String?) -> TTNavigationControllerViewController{
+        let vc = TTNavigationControllerViewController.init(rootViewController: viewController)
+        vc.title = title
+        return vc
+    }
+}

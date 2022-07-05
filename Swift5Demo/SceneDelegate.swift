@@ -65,9 +65,9 @@ extension SceneDelegate {
         tabVC.tabBar.shadowImage = UIImage(named: "")
         tabVC.shouldHijackHandler = {
             tabvc,vc,index in
-            if index == 2 {
-                return true
-            }
+//            if index == 2 {
+//                return true
+//            }//控制选中不规则tabbar的是否跳转
             return false
         }
         
@@ -77,7 +77,7 @@ extension SceneDelegate {
                 let warning = MessageView.viewFromNib(layout: .cardView)
                 warning.configureTheme(.warning)
                 warning.configureDropShadow()
-                warning.configureContent(title: "Warning", body: "暂时没有此功能", iconText: "🙄")
+                warning.configureContent(title: "Present", body: "打开新页面", iconText: "🙄")
                 warning.button?.isHidden = true
                 var warningConfig = SwiftMessages.defaultConfig
                 warningConfig.presentationContext = .window(windowLevel: UIWindow.Level.statusBar)
@@ -91,11 +91,11 @@ extension SceneDelegate {
         let about = TTAboutViewController()
         let my = TTMyViewController()
         
-        home.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "Home", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
-        message.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "Message", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
-        discover.tabBarItem = ESTabBarItem.init(TTIrregularTabbarItemView(), title: "Discover", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
-        about.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "About", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
-        my.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "My", image: UIImage(named: ""), selectedImage: UIImage(named: ""))
+        home.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_select"))
+        message.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "Message", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_select"))
+        discover.tabBarItem = ESTabBarItem.init(TTIrregularTabbarItemView(), title: "Discover", image: UIImage(named: "discover"), selectedImage: UIImage(named: "discover"))
+        about.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "About", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_select"))
+        my.tabBarItem = ESTabBarItem.init(TTTabItemView(), title: "My", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_select"))
         
         tabVC.viewControllers = [
             setRoot(viewController: home, title: "Home"),
@@ -109,8 +109,8 @@ extension SceneDelegate {
        return tabVC
     }
     private func setRoot(viewController: UIViewController,title: String?) -> TTNavigationControllerViewController{
+        viewController.title = title
         let vc = TTNavigationControllerViewController.init(rootViewController: viewController)
-        vc.title = title
         return vc
     }
 }

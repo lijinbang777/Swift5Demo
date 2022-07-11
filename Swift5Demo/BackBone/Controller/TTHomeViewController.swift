@@ -14,17 +14,28 @@ class TTHomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        view.backgroundColor = UIColor.yellow
-        let btn = UIButton(type: .custom)
-        btn.backgroundColor = UIColor.red
-        btn.addTarget(self, action: #selector(click), for: UIControl.Event.touchUpInside)
-        view.addSubview(btn)
-        //        btn.frame = CGRect(x: 0, y: 0, width: 100, height: 30)
-        //        btn.center = self.view.center
-        //测试自动布局代码块
-        btn.snp_makeConstraints { make in
-            make.width.height.equalTo(120)
-            make.center.equalToSuperview().offset(0)
+//        view.backgroundColor = UIColor.yellow
+//        let btn = UIButton(type: .custom)
+//        btn.backgroundColor = UIColor.red
+//        btn.addTarget(self, action: #selector(click), for: UIControl.Event.touchUpInside)
+//        view.addSubview(btn)
+//        //        btn.frame = CGRect(x: 0, y: 0, width: 100, height: 30)
+//        //        btn.center = self.view.center
+//        //测试自动布局代码块
+//        btn.snp_makeConstraints { make in
+//            make.width.height.equalTo(120)
+//            make.center.equalToSuperview().offset(0)
+//        }
+        
+        let customView = LLCustomView()
+        customView.backgroundColor = UIColor.red
+        self.view.addSubview(customView)
+        customView .snp_makeConstraints { make in
+            make.width.height.equalTo(200)
+           make.center.equalToSuperview().offset(0)
+        }
+        customView.llclick = { string in
+            print(string)
         }
         
     }
@@ -45,3 +56,38 @@ class TTHomeViewController: UIViewController {
 
 }
 
+class LLCustomView: UIView{
+    typealias LLClick = (_ str: String) -> Void
+    var llclick: LLClick?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addAction()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    func addAction(){
+        let btn = UIButton(type: .custom)
+        btn.titleLabel?.text = "测试"
+        btn.backgroundColor = UIColor.purple
+//        btn.addTarget(self, action: #selector(actionTest(sender:)), for: UIControl.Event.touchUpInside)
+        btn.addTarget(self, action:#selector(actionTest), for: UIControl.Event.touchUpInside)
+        self.addSubview(btn)
+        btn.snp_makeConstraints { make in
+            make.width.height.equalTo(40)
+            make.center.equalToSuperview().offset(0);
+        }
+    }
+//    @objc func actionTest(sender: UIButton){
+//        if self.llclick != nil  {
+//            print("有参")
+//        }
+//    }
+    @objc func actionTest(){
+        if self.llclick != nil {
+            self.llclick!("无参")
+        }
+    }
+}

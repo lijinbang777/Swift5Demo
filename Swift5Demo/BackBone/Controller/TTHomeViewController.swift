@@ -38,6 +38,15 @@ class TTHomeViewController: UIViewController {
             print(string)
         }
         
+        let test = TestClass()
+        test.age = 12
+        test.name = "22"
+        test.action()
+        
+        let test2: TTTest = TTTest()
+        test2.test()
+    
+        
     }
     @objc func click(){
         let vc = ViewController()

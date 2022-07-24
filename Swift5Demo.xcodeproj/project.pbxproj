@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320F2178288DA23A005F07A4 /* TTConstTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320F2177288DA23A005F07A4 /* TTConstTool.swift */; };
+		320F217B288DA27C005F07A4 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320F217A288DA27C005F07A4 /* UIView+Shake.swift */; };
 		323379B8288060C5009958A6 /* TTTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 323379B7288060C5009958A6 /* TTTest.m */; };
 		32AD7265287320CC0037387D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD7264287320CC0037387D /* AppDelegate.swift */; };
 		32AD7267287320CC0037387D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD7266287320CC0037387D /* SceneDelegate.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		320F2177288DA23A005F07A4 /* TTConstTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTConstTool.swift; sourceTree = "<group>"; };
+		320F217A288DA27C005F07A4 /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		323379B5288060C4009958A6 /* Swift5Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift5Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		323379B6288060C5009958A6 /* TTTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTTest.h; sourceTree = "<group>"; };
 		323379B7288060C5009958A6 /* TTTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTTest.m; sourceTree = "<group>"; };
@@ -64,6 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		320F2176288DA205005F07A4 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				320F2177288DA23A005F07A4 /* TTConstTool.swift */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		320F2179288DA254005F07A4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				320F217A288DA27C005F07A4 /* UIView+Shake.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		32AD7258287320CB0037387D = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +123,8 @@
 		32AD727828732CD30037387D /* BackBone */ = {
 			isa = PBXGroup;
 			children = (
+				320F2179288DA254005F07A4 /* Protocol */,
+				320F2176288DA205005F07A4 /* Tool */,
 				32AE3425287F0FB300A5DF10 /* Extension */,
 				32AD7289287335A10037387D /* Config */,
 				32AD727A28732CF70037387D /* View */,
@@ -284,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				323379B8288060C5009958A6 /* TTTest.m in Sources */,
+				320F2178288DA23A005F07A4 /* TTConstTool.swift in Sources */,
 				32AD72882873351A0037387D /* TTNavigationControllerViewController.swift in Sources */,
 				32AD728428732E610037387D /* TTMyViewController.swift in Sources */,
 				32AD727E28732DEB0037387D /* TTMessageViewController.swift in Sources */,
@@ -292,6 +315,7 @@
 				32AD7269287320CC0037387D /* ViewController.swift in Sources */,
 				32AD728228732E580037387D /* TTAboutViewController.swift in Sources */,
 				32AD728028732E4C0037387D /* TTDiscoverViewController.swift in Sources */,
+				320F217B288DA27C005F07A4 /* UIView+Shake.swift in Sources */,
 				32AD728B287335BA0037387D /* TTConfig.swift in Sources */,
 				32AD728D287341C80037387D /* TTHomeViewController.swift in Sources */,
 				32AD7265287320CC0037387D /* AppDelegate.swift in Sources */,
